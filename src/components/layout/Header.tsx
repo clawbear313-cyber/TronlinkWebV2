@@ -70,7 +70,7 @@ export default function Header() {
           {/* Desktop Nav */}
           <nav
             aria-label="Main navigation"
-            style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}
+            style={{ gap: '2rem', alignItems: 'center' }}
             className="hidden md:flex"
           >
             {NAV_ITEMS.filter((n) => n.label !== 'Home' && n.label !== 'Contact').map((item) => (
@@ -108,7 +108,6 @@ export default function Header() {
               color: hamColor,
               padding: '0.5rem',
               transition: 'color 300ms ease',
-              display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
             }}
@@ -141,7 +140,6 @@ export default function Header() {
           zIndex: 99,
           backgroundColor: 'rgba(255,255,255,0.98)',
           backdropFilter: 'blur(16px)',
-          display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
           padding: '6rem 2rem 3rem',

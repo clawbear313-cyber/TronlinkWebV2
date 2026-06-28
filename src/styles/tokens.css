@@ -141,6 +141,17 @@
     color: #0f0e17;
   }
 
+  /* btn-ghost on dark hero backgrounds */
+  .hero-content .btn-ghost {
+    border-color: rgba(255,255,255,0.6);
+    color: #ffffff;
+  }
+  .hero-content .btn-ghost:hover {
+    border-color: #ffffff;
+    color: #ffffff;
+    background-color: rgba(255,255,255,0.1);
+  }
+
   /* Section number */
   .section-num {
     font-family: 'JetBrains Mono', ui-monospace, monospace;
