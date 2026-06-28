@@ -1,21 +1,21 @@
 import { Link } from 'react-router-dom';
-import { FOOTER, NAV_ITEMS } from '@/lib/data.ts';
+import { FOOTER } from '@/lib/data.ts';
 
 export default function Footer() {
   return (
-    <footer style={{ backgroundColor: '#f5f5ff', borderTop: '1px solid #c7d2fe' }}>
+    <footer style={{ backgroundColor: '#f5f5ff', borderTop: '2px solid #c7d2fe' }}>
       <div className="container-site" style={{ paddingTop: '4rem', paddingBottom: '2rem' }}>
-        {/* Top row */}
+        {/* 3-col grid: left tagline, center services, right connect */}
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
             gap: '3rem',
             paddingBottom: '3rem',
             borderBottom: '1px solid #c7d2fe',
           }}
         >
-          {/* Brand */}
+          {/* Left — large tagline */}
           <div>
             <Link to="/" aria-label="Tronlix home">
               <svg width="120" height="28" viewBox="0 0 120 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -24,32 +24,25 @@ export default function Footer() {
                 <text x="26" y="20" fontFamily="Inter, sans-serif" fontSize="13" fontWeight="600" letterSpacing="0.12em" fill="#0f0e17">RONLIX</text>
               </svg>
             </Link>
-            <p style={{ color: '#374151', fontSize: '0.8125rem', lineHeight: 1.7, marginTop: '1rem', maxWidth: '220px' }}>
-              {FOOTER.tagline}<br />
+            <p
+              style={{
+                fontSize: 'clamp(1rem, 1.5vw, 1.25rem)',
+                fontWeight: 700,
+                color: '#0f0e17',
+                lineHeight: 1.3,
+                marginTop: '1.25rem',
+                maxWidth: '240px',
+                letterSpacing: '-0.01em',
+              }}
+            >
+              {FOOTER.tagline}
+            </p>
+            <p style={{ color: '#374151', fontSize: '0.8125rem', lineHeight: 1.7, marginTop: '0.5rem', maxWidth: '240px' }}>
               {FOOTER.tagline2}
             </p>
           </div>
 
-          {/* Navigation */}
-          <div>
-            <p className="label-tag" style={{ marginBottom: '1.25rem' }}>Navigation</p>
-            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.625rem' }}>
-              {NAV_ITEMS.map((item) => (
-                <li key={item.path}>
-                  <Link
-                    to={item.path}
-                    style={{ color: '#374151', fontSize: '0.875rem', transition: 'color 200ms ease' }}
-                    onMouseEnter={(e) => (e.currentTarget.style.color = '#0f0e17')}
-                    onMouseLeave={(e) => (e.currentTarget.style.color = '#374151')}
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Services */}
+          {/* Center — services list */}
           <div>
             <p className="label-tag" style={{ marginBottom: '1.25rem' }}>Services</p>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.625rem' }}>
@@ -68,7 +61,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Connect */}
+          {/* Right — connect links */}
           <div>
             <p className="label-tag" style={{ marginBottom: '1.25rem' }}>Connect</p>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.625rem' }}>
@@ -90,7 +83,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom row */}
+        {/* Bottom bar: flex between copyright and bottom tag */}
         <div
           style={{
             paddingTop: '1.5rem',
