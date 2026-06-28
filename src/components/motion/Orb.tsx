@@ -1,7 +1,7 @@
 // Ambient decorative orb — subtle animated glow circle
 export default function Orb({
   size = 400,
-  color = '#2e8fae',
+  color = '#1a6e8a',
   opacity = 0.06,
   className = '',
 }: {

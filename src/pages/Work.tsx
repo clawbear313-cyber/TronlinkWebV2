@@ -18,7 +18,7 @@ export default function Work() {
             <h1 style={{ fontSize: 'clamp(2.25rem, 5vw, 3.75rem)', fontWeight: 700, marginBottom: '1rem', maxWidth: '560px' }}>
               實作案例
             </h1>
-            <p style={{ color: '#7e8c8c', fontSize: '1.0625rem', maxWidth: '420px' }}>
+            <p style={{ color: '#3d4a52', fontSize: '1.0625rem', maxWidth: '420px' }}>
               每個專案都是一次工程挑戰的完整實踐。
             </p>
           </Reveal>
@@ -26,12 +26,12 @@ export default function Work() {
       </section>
 
       {/* Cases */}
-      <section className="section-pad" style={{ backgroundColor: '#0f1117' }}>
+      <section className="section-pad" style={{ backgroundColor: '#f5f4f0' }}>
         <div className="container-site">
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0' }}>
             {WORK_CASES.map((wc, i) => (
               <Reveal key={wc.id} delay={i * 0.1}>
-                <article style={{ borderTop: '1px solid #1f2d38', paddingTop: '4rem', paddingBottom: '4rem' }}>
+                <article style={{ borderTop: '1px solid #d2cdc8', paddingTop: '4rem', paddingBottom: '4rem' }}>
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '3rem', alignItems: 'start' }}>
                     {/* Left */}
                     <div>
@@ -45,8 +45,8 @@ export default function Work() {
                             style={{
                               fontFamily: 'JetBrains Mono, monospace',
                               fontSize: '0.6875rem',
-                              color: '#2e8fae',
-                              border: '1px solid #1f2d38',
+                              color: '#1a6e8a',
+                              border: '1px solid #d2cdc8',
                               padding: '0.1875rem 0.5rem',
                               borderRadius: '0.125rem',
                             }}
@@ -63,7 +63,7 @@ export default function Work() {
                         ].map(({ label, text }) => (
                           <div key={label}>
                             <p className="label-tag" style={{ marginBottom: '0.5rem' }}>{label}</p>
-                            <p style={{ color: '#7e8c8c', fontSize: '0.875rem', lineHeight: 1.7 }}>{text}</p>
+                            <p style={{ color: '#3d4a52', fontSize: '0.875rem', lineHeight: 1.7 }}>{text}</p>
                           </div>
                         ))}
                       </div>
@@ -84,26 +84,26 @@ export default function Work() {
                         role="img"
                         aria-label={`${wc.client} project`}
                       />
-                      <div style={{ backgroundColor: '#1a2230', border: '1px solid #1f2d38', borderRadius: '0.25rem', padding: '1.5rem' }}>
+                      <div style={{ backgroundColor: '#ffffff', border: '1px solid #d2cdc8', borderRadius: '0.25rem', padding: '1.5rem' }}>
                         <p className="label-tag" style={{ marginBottom: '0.75rem' }}>Outcome</p>
-                        <p style={{ color: '#e2dbd4', fontWeight: 500, lineHeight: 1.65 }}>{wc.outcome}</p>
+                        <p style={{ color: '#111318', fontWeight: 500, lineHeight: 1.65 }}>{wc.outcome}</p>
                       </div>
                     </div>
                   </div>
                 </article>
               </Reveal>
             ))}
-            <div style={{ borderTop: '1px solid #1f2d38' }} />
+            <div style={{ borderTop: '1px solid #d2cdc8' }} />
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section style={{ backgroundColor: '#0d1219', borderTop: '1px solid #1f2d38' }}>
+      <section style={{ backgroundColor: '#eeecea', borderTop: '1px solid #d2cdc8' }}>
         <div className="container-site" style={{ paddingTop: '4rem', paddingBottom: '4rem', textAlign: 'center' }}>
           <Reveal>
             <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', fontWeight: 600, marginBottom: '1rem' }}>準備好開始了嗎？</h2>
-            <p style={{ color: '#7e8c8c', marginBottom: '2rem' }}>讓我們一起討論您的下一個專案。</p>
+            <p style={{ color: '#3d4a52', marginBottom: '2rem' }}>讓我們一起討論您的下一個專案。</p>
             <Link to="/contact" className="btn-primary">Start a Project</Link>
           </Reveal>
         </div>

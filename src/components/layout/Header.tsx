@@ -22,8 +22,8 @@ export default function Header() {
         right: 0,
         zIndex: 100,
         transition: 'background-color 300ms ease, border-color 300ms ease',
-        backgroundColor: scrolled ? 'rgba(15,17,23,0.96)' : 'transparent',
-        borderBottom: scrolled ? '1px solid #1f2d38' : '1px solid transparent',
+        backgroundColor: scrolled ? 'rgba(245,244,240,0.96)' : 'transparent',
+        borderBottom: scrolled ? '1px solid #d2cdc8' : '1px solid transparent',
         backdropFilter: scrolled ? 'blur(12px)' : 'none',
       }}
     >
@@ -31,15 +31,15 @@ export default function Header() {
         {/* Logo */}
         <Link to="/" aria-label="Tronlix home">
           <svg width="120" height="28" viewBox="0 0 120 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <rect x="0" y="4" width="20" height="20" fill="none" stroke="#2e8fae" strokeWidth="1.5" />
-            <text x="5" y="19" fontFamily="Inter, sans-serif" fontSize="12" fontWeight="700" fill="#2e8fae">T</text>
-            <text x="26" y="20" fontFamily="Inter, sans-serif" fontSize="13" fontWeight="600" letterSpacing="0.12em" fill="#e2dbd4">RONLIX</text>
+            <rect x="0" y="4" width="20" height="20" fill="none" stroke="#1a6e8a" strokeWidth="1.5" />
+            <text x="5" y="19" fontFamily="Inter, sans-serif" fontSize="12" fontWeight="700" fill="#1a6e8a">T</text>
+            <text x="26" y="20" fontFamily="Inter, sans-serif" fontSize="13" fontWeight="600" letterSpacing="0.12em" fill="#111318">RONLIX</text>
           </svg>
         </Link>
 
         {/* Desktop Nav */}
         <nav aria-label="Main navigation" style={{ display: 'flex', gap: '2rem', alignItems: 'center' }} className="hidden md:flex">
-          {NAV_ITEMS.filter((n) => n.label !== 'Home').map((item) => (
+          {NAV_ITEMS.filter((n) => n.label !== 'Home' && n.label !== 'Contact').map((item) => (
             <NavLink
               key={item.path}
               to={item.path}
@@ -47,7 +47,7 @@ export default function Header() {
                 fontSize: '0.8125rem',
                 fontWeight: 500,
                 letterSpacing: '0.04em',
-                color: isActive ? '#e2dbd4' : '#7e8c8c',
+                color: isActive ? '#111318' : '#3d4a52',
                 transition: 'color 200ms ease',
               })}
             >
@@ -64,7 +64,7 @@ export default function Header() {
           className="md:hidden"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-          style={{ color: '#7e8c8c', padding: '0.5rem' }}
+          style={{ color: '#3d4a52', padding: '0.5rem' }}
         >
           <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
             {menuOpen ? (
@@ -87,23 +87,23 @@ export default function Header() {
       {menuOpen && (
         <div
           style={{
-            backgroundColor: 'rgba(15,17,23,0.98)',
-            borderTop: '1px solid #1f2d38',
+            backgroundColor: 'rgba(245,244,240,0.98)',
+            borderTop: '1px solid #d2cdc8',
             padding: '1.5rem',
           }}
           className="md:hidden"
         >
           <nav aria-label="Mobile navigation" style={{ display: 'flex', flexDirection: 'column', gap: '0' }}>
-            {NAV_ITEMS.map((item) => (
+            {NAV_ITEMS.filter((n) => n.label !== 'Contact').map((item) => (
               <NavLink
                 key={item.path}
                 to={item.path}
                 style={({ isActive }) => ({
                   fontSize: '1rem',
                   fontWeight: 500,
-                  color: isActive ? '#e2dbd4' : '#7e8c8c',
+                  color: isActive ? '#111318' : '#3d4a52',
                   padding: '0.875rem 0',
-                  borderBottom: '1px solid #1f2d38',
+                  borderBottom: '1px solid #d2cdc8',
                   display: 'block',
                 })}
               >
