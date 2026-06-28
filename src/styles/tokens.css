@@ -260,6 +260,33 @@
     padding: 1.5rem 1.5rem 1.5rem 1.75rem;
   }
 
+  /* Process timeline */
+  .process-steps-wrap {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0;
+    position: relative;
+    z-index: 1;
+  }
+  .process-step {
+    flex: 1 1 0;
+    padding-top: 0;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+    position: relative;
+  }
+  .process-dot {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    background-color: #4f46e5;
+    margin-bottom: 1.5rem;
+    flex-shrink: 0;
+  }
+  .process-h-line {
+    display: block;
+  }
+
   /* ── RWD: mobile overrides ── */
 }
 
@@ -287,6 +314,32 @@
 
   .pull-quote {
     font-size: clamp(1.25rem, 5vw, 1.75rem);
+  }
+
+  /* Process: vertical rail on mobile */
+  .process-h-line {
+    display: none;
+  }
+  .process-steps-wrap {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding-left: 1.5rem;
+    border-left: 1px solid #c7d2fe;
+  }
+  .process-step {
+    padding-right: 0;
+    padding-bottom: 2.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+  .process-dot {
+    position: absolute;
+    left: -1.875rem;
+    top: 0;
+    margin-bottom: 0;
+    background-color: #4f46e5;
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 0 1px #4f46e5;
   }
 }
 

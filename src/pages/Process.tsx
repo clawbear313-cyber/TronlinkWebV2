@@ -47,20 +47,16 @@ export default function Process() {
 
           {/*
             Desktop: horizontal flex row with connecting thin line
-            Mobile: vertical column
+            Mobile: vertical column with left rail line
           */}
-          <div
-            ref={stepsRef}
-            style={{
-              position: 'relative',
-            }}
-          >
-            {/* Horizontal connector line — visible on desktop */}
+          <div ref={stepsRef} style={{ position: 'relative' }}>
+            {/* Desktop horizontal connector — hidden on mobile via CSS */}
             <div
               aria-hidden="true"
+              className="process-h-line"
               style={{
                 position: 'absolute',
-                top: '2.25rem',
+                top: '0.375rem',
                 left: '0',
                 right: '0',
                 height: '1px',
@@ -69,37 +65,16 @@ export default function Process() {
               }}
             />
 
-            <div
-              style={{
-                display: 'flex',
-                flexWrap: 'wrap',
-                gap: '0',
-                position: 'relative',
-                zIndex: 1,
-              }}
-            >
+            <div className="process-steps-wrap">
               {PROCESS_STEPS.map((step, i) => (
                 <div
                   key={step.num}
-                  style={{
-                    flex: '1 1 180px',
-                    paddingTop: '0',
-                    paddingRight: '2rem',
-                    paddingBottom: '2rem',
-                    position: 'relative',
-                  }}
+                  className="process-step"
                 >
                   {/* Step dot */}
                   <div
                     aria-hidden="true"
-                    style={{
-                      width: '0.75rem',
-                      height: '0.75rem',
-                      borderRadius: '50%',
-                      backgroundColor: '#4f46e5',
-                      marginBottom: '1.5rem',
-                      flexShrink: 0,
-                    }}
+                    className="process-dot"
                   />
                   {/* Large number */}
                   <p
@@ -126,7 +101,7 @@ export default function Process() {
                   <p style={{ color: '#374151', lineHeight: 1.7, fontSize: '0.875rem', maxWidth: '30ch' }}>
                     {step.desc}
                   </p>
-                </div>
+                  </div>
               ))}
             </div>
           </div>
