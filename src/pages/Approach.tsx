@@ -26,7 +26,7 @@ export default function Approach() {
                 maxWidth: '640px',
                 letterSpacing: '-0.03em',
                 lineHeight: 1.05,
-                color: '#0f0e17',
+                color: 'inherit',
               }}
             >
               工程導向的設計哲學

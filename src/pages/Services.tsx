@@ -23,12 +23,12 @@ export default function Services() {
                 maxWidth: '640px',
                 letterSpacing: '-0.03em',
                 lineHeight: 1.05,
-                color: '#0f0e17',
+                color: 'inherit',
               }}
             >
               服務核心
             </h1>
-            <p style={{ color: '#374151', fontSize: '1.0625rem', maxWidth: '52ch', lineHeight: 1.75 }}>
+            <p style={{ color: 'rgba(255,255,255,0.82)', fontSize: '1.0625rem', maxWidth: '52ch', lineHeight: 1.75 }}>
               以工程紀律建構每一個數位系統。
             </p>
           </Reveal>
@@ -138,7 +138,6 @@ export default function Services() {
               </Reveal>
             );
           })}
-          <div style={{ borderTop: '1px solid #c7d2fe' }} />
         </div>
       </section>
 

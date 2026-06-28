@@ -26,12 +26,12 @@ export default function Process() {
                 maxWidth: '640px',
                 letterSpacing: '-0.03em',
                 lineHeight: 1.05,
-                color: '#0f0e17',
+                color: 'inherit',
               }}
             >
               協作流程
             </h1>
-            <p style={{ color: '#374151', fontSize: '1.0625rem', maxWidth: '52ch', lineHeight: 1.75 }}>
+            <p style={{ color: 'rgba(255,255,255,0.82)', fontSize: '1.0625rem', maxWidth: '52ch', lineHeight: 1.75 }}>
               結構化的流程確保每個專案準時完成，並建立長期合作的信賴基礎。
             </p>
           </Reveal>

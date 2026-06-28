@@ -152,7 +152,7 @@ export default function Header() {
         }}
       >
         <nav aria-label="Mobile navigation">
-          {NAV_ITEMS.filter((n) => n.label !== 'Contact').map((item, i) => (
+          {NAV_ITEMS.filter((n) => n.label !== 'Contact').map((item, i, arr) => (
             <NavLink
               key={item.path}
               to={item.path}
@@ -164,7 +164,7 @@ export default function Header() {
                 color: isActive ? '#4f46e5' : '#0f0e17',
                 paddingTop: '0.75rem',
                 paddingBottom: '0.75rem',
-                borderBottom: '1px solid #eef2ff',
+                borderBottom: i < arr.length - 1 ? '1px solid #eef2ff' : 'none',
                 // Staggered slide-in
                 opacity: menuOpen ? 1 : 0,
                 transform: menuOpen ? 'none' : 'translateY(12px)',

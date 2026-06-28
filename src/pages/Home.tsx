@@ -41,7 +41,7 @@ export default function Home() {
                 fontSize: 'clamp(3.5rem, 8vw, 7rem)',
                 fontWeight: 800,
                 marginBottom: '1.5rem',
-                color: '#0f0e17',
+                color: 'inherit',
                 lineHeight: 1.05,
                 letterSpacing: '-0.02em',
               }}
@@ -50,7 +50,7 @@ export default function Home() {
             </h1>
             <p
               style={{
-                color: '#374151',
+                color: 'rgba(255,255,255,0.82)',
                 fontSize: '1.0625rem',
                 lineHeight: 1.75,
                 maxWidth: '52ch',
@@ -294,7 +294,7 @@ export default function Home() {
       </section>
 
       {/* ── CTA Banner ── */}
-      <section style={{ backgroundColor: '#f5f5ff', borderTop: '1px solid #c7d2fe', borderBottom: '1px solid #c7d2fe' }}>
+      <section style={{ backgroundColor: '#f5f5ff', borderTop: '1px solid #c7d2fe' }}>
         <div
           className="container-site"
           style={{ paddingTop: '6rem', paddingBottom: '6rem', textAlign: 'center' }}

@@ -28,12 +28,12 @@ export default function About() {
                 maxWidth: '680px',
                 letterSpacing: '-0.03em',
                 lineHeight: 1.05,
-                color: '#0f0e17',
+                color: 'inherit',
               }}
             >
               我們是工程師，也是長期夥伴。
             </h1>
-            <p style={{ color: '#374151', fontSize: '1.0625rem', maxWidth: '52ch', lineHeight: 1.75 }}>
+            <p style={{ color: 'rgba(255,255,255,0.82)', fontSize: '1.0625rem', maxWidth: '52ch', lineHeight: 1.75 }}>
               Tronlix 以工程化的系統建構，在長期合作中建立深厚的技術信賴。
             </p>
           </Reveal>

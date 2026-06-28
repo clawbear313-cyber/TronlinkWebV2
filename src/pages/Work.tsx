@@ -23,12 +23,12 @@ export default function Work() {
                 maxWidth: '640px',
                 letterSpacing: '-0.03em',
                 lineHeight: 1.05,
-                color: '#0f0e17',
+                color: 'inherit',
               }}
             >
               實作案例
             </h1>
-            <p style={{ color: '#374151', fontSize: '1.0625rem', maxWidth: '52ch', lineHeight: 1.75 }}>
+            <p style={{ color: 'rgba(255,255,255,0.82)', fontSize: '1.0625rem', maxWidth: '52ch', lineHeight: 1.75 }}>
               每個專案都是一次工程挑戰的完整實踐。
             </p>
           </Reveal>
@@ -140,7 +140,6 @@ export default function Work() {
               </article>
             </Reveal>
           ))}
-          <div style={{ borderTop: '1px solid #c7d2fe' }} />
         </div>
       </section>
 
