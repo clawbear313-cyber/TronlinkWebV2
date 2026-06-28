@@ -15,7 +15,7 @@ export default function Accordion({ items }: AccordionProps) {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <div className="divide-y" style={{ borderColor: '#44403c' }}>
+    <div className="divide-y" style={{ borderColor: '#c7d2fe' }}>
       {items.map((item, i) => (
         <div key={i}>
           <button
@@ -24,14 +24,14 @@ export default function Accordion({ items }: AccordionProps) {
             aria-expanded={open === i}
           >
             <div>
-              <p style={{ color: '#fafaf9', fontWeight: 500, fontSize: '1rem' }}>{item.questionZh}</p>
-              <p style={{ color: '#a8a29e', fontSize: '0.8125rem', marginTop: '0.25rem', fontFamily: 'JetBrains Mono, monospace' }}>
+              <p style={{ color: '#0f0e17', fontWeight: 500, fontSize: '1rem' }}>{item.questionZh}</p>
+              <p style={{ color: '#374151', fontSize: '0.8125rem', marginTop: '0.25rem', fontFamily: 'JetBrains Mono, monospace' }}>
                 {item.questionEn}
               </p>
             </div>
             <span
               style={{
-                color: '#d97706',
+                color: '#4f46e5',
                 fontSize: '1.25rem',
                 lineHeight: 1,
                 flexShrink: 0,
@@ -45,8 +45,8 @@ export default function Accordion({ items }: AccordionProps) {
           </button>
           {open === i && (
             <div style={{ paddingBottom: '1.25rem' }}>
-              <p style={{ color: '#a8a29e', lineHeight: 1.7, marginBottom: '0.75rem' }}>{item.answerZh}</p>
-              <p style={{ color: '#a8a29e', fontSize: '0.875rem', lineHeight: 1.7 }}>{item.answerEn}</p>
+              <p style={{ color: '#374151', lineHeight: 1.7, marginBottom: '0.75rem' }}>{item.answerZh}</p>
+              <p style={{ color: '#374151', fontSize: '0.875rem', lineHeight: 1.7 }}>{item.answerEn}</p>
             </div>
           )}
         </div>
