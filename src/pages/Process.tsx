@@ -21,7 +21,7 @@ export default function Process() {
             <h1 style={{ fontSize: 'clamp(2.25rem, 5vw, 3.75rem)', fontWeight: 700, marginBottom: '1rem', maxWidth: '560px' }}>
               協作流程
             </h1>
-            <p style={{ color: '#a8a29e', fontSize: '1.0625rem', maxWidth: '480px' }}>
+            <p style={{ color: '#4a5240', fontSize: '1.0625rem', maxWidth: '480px' }}>
               結構化的流程確保每個專案準時完成，並建立長期合作的信賴基礎。
             </p>
           </Reveal>
@@ -29,7 +29,7 @@ export default function Process() {
       </section>
 
       {/* Steps */}
-      <section className="section-pad" style={{ backgroundColor: '#1c1917' }}>
+      <section className="section-pad" style={{ backgroundColor: '#faf7f2' }}>
         <div className="container-site">
           <div ref={stepsRef} style={{ display: 'flex', flexDirection: 'column', gap: '0' }}>
             {PROCESS_STEPS.map((step, i) => (
@@ -40,7 +40,7 @@ export default function Process() {
                   gridTemplateColumns: '80px 1fr',
                   gap: '2rem',
                   padding: '2.5rem 0',
-                  borderBottom: i < PROCESS_STEPS.length - 1 ? '1px solid #44403c' : 'none',
+                  borderBottom: i < PROCESS_STEPS.length - 1 ? '1px solid #d4cdb8' : 'none',
                   alignItems: 'start',
                 }}
               >
@@ -50,7 +50,7 @@ export default function Process() {
                       fontFamily: 'JetBrains Mono, monospace',
                       fontSize: '2.25rem',
                       fontWeight: 400,
-                      color: '#44403c',
+                      color: '#d4cdb8',
                       lineHeight: 1,
                     }}
                   >
@@ -58,13 +58,13 @@ export default function Process() {
                   </p>
                 </div>
                 <div>
-                  <h2 style={{ fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.375rem', color: '#fafaf9' }}>
+                  <h2 style={{ fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.375rem', color: '#1a1a16' }}>
                     {step.titleZh}
                   </h2>
-                  <p style={{ color: '#a8a29e', fontFamily: 'JetBrains Mono, monospace', fontSize: '0.8125rem', marginBottom: '0.875rem' }}>
+                  <p style={{ color: '#4a5240', fontFamily: 'JetBrains Mono, monospace', fontSize: '0.8125rem', marginBottom: '0.875rem' }}>
                     {step.titleEn}
                   </p>
-                  <p style={{ color: '#a8a29e', lineHeight: 1.7, fontSize: '0.9375rem', maxWidth: '560px' }}>
+                  <p style={{ color: '#4a5240', lineHeight: 1.7, fontSize: '0.9375rem', maxWidth: '560px' }}>
                     {step.desc}
                   </p>
                 </div>
@@ -75,11 +75,11 @@ export default function Process() {
       </section>
 
       {/* CTA */}
-      <section style={{ backgroundColor: '#292524', borderTop: '1px solid #44403c' }}>
+      <section style={{ backgroundColor: '#f0ebe2', borderTop: '1px solid #d4cdb8' }}>
         <div className="container-site" style={{ paddingTop: '4rem', paddingBottom: '4rem', textAlign: 'center' }}>
           <Reveal>
             <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', fontWeight: 600, marginBottom: '1rem' }}>準備好開始了嗎？</h2>
-            <p style={{ color: '#a8a29e', marginBottom: '2rem' }}>讓我們一起討論您的下一個專案。</p>
+            <p style={{ color: '#4a5240', marginBottom: '2rem' }}>讓我們一起討論您的下一個專案。</p>
             <Link to="/contact" className="btn-primary">Contact Us</Link>
           </Reveal>
         </div>

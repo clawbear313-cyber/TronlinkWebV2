@@ -3,7 +3,7 @@ import { FOOTER, NAV_ITEMS } from '@/lib/data.ts';
 
 export default function Footer() {
   return (
-    <footer style={{ backgroundColor: '#292524', borderTop: '1px solid #44403c' }}>
+    <footer style={{ backgroundColor: '#f0ebe2', borderTop: '1px solid #d4cdb8' }}>
       <div className="container-site" style={{ paddingTop: '4rem', paddingBottom: '2rem' }}>
         {/* Top row */}
         <div
@@ -12,19 +12,19 @@ export default function Footer() {
             gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
             gap: '3rem',
             paddingBottom: '3rem',
-            borderBottom: '1px solid #44403c',
+            borderBottom: '1px solid #d4cdb8',
           }}
         >
           {/* Brand */}
           <div>
             <Link to="/" aria-label="Tronlix home">
               <svg width="120" height="28" viewBox="0 0 120 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <rect x="0" y="4" width="20" height="20" fill="none" stroke="#d97706" strokeWidth="1.5" />
-                <text x="5" y="19" fontFamily="Inter, sans-serif" fontSize="12" fontWeight="700" fill="#d97706">T</text>
-                <text x="26" y="20" fontFamily="Inter, sans-serif" fontSize="13" fontWeight="600" letterSpacing="0.12em" fill="#fafaf9">RONLIX</text>
+                <rect x="0" y="4" width="20" height="20" fill="none" stroke="#2d6a4f" strokeWidth="1.5" />
+                <text x="5" y="19" fontFamily="Inter, sans-serif" fontSize="12" fontWeight="700" fill="#2d6a4f">T</text>
+                <text x="26" y="20" fontFamily="Inter, sans-serif" fontSize="13" fontWeight="600" letterSpacing="0.12em" fill="#1a1a16">RONLIX</text>
               </svg>
             </Link>
-            <p style={{ color: '#a8a29e', fontSize: '0.8125rem', lineHeight: 1.7, marginTop: '1rem', maxWidth: '220px' }}>
+            <p style={{ color: '#4a5240', fontSize: '0.8125rem', lineHeight: 1.7, marginTop: '1rem', maxWidth: '220px' }}>
               {FOOTER.tagline}<br />
               {FOOTER.tagline2}
             </p>
@@ -38,9 +38,9 @@ export default function Footer() {
                 <li key={item.path}>
                   <Link
                     to={item.path}
-                    style={{ color: '#a8a29e', fontSize: '0.875rem', transition: 'color 200ms ease' }}
-                    onMouseEnter={(e) => (e.currentTarget.style.color = '#fafaf9')}
-                    onMouseLeave={(e) => (e.currentTarget.style.color = '#a8a29e')}
+                    style={{ color: '#4a5240', fontSize: '0.875rem', transition: 'color 200ms ease' }}
+                    onMouseEnter={(e) => (e.currentTarget.style.color = '#1a1a16')}
+                    onMouseLeave={(e) => (e.currentTarget.style.color = '#4a5240')}
                   >
                     {item.label}
                   </Link>
@@ -57,9 +57,9 @@ export default function Footer() {
                 <li key={s}>
                   <Link
                     to="/services"
-                    style={{ color: '#a8a29e', fontSize: '0.875rem', transition: 'color 200ms ease' }}
-                    onMouseEnter={(e) => (e.currentTarget.style.color = '#fafaf9')}
-                    onMouseLeave={(e) => (e.currentTarget.style.color = '#a8a29e')}
+                    style={{ color: '#4a5240', fontSize: '0.875rem', transition: 'color 200ms ease' }}
+                    onMouseEnter={(e) => (e.currentTarget.style.color = '#1a1a16')}
+                    onMouseLeave={(e) => (e.currentTarget.style.color = '#4a5240')}
                   >
                     {s}
                   </Link>
@@ -76,9 +76,9 @@ export default function Footer() {
                 <li key={c.label}>
                   <a
                     href={c.href}
-                    style={{ color: '#a8a29e', fontSize: '0.875rem', transition: 'color 200ms ease' }}
-                    onMouseEnter={(e) => (e.currentTarget.style.color = '#fafaf9')}
-                    onMouseLeave={(e) => (e.currentTarget.style.color = '#a8a29e')}
+                    style={{ color: '#4a5240', fontSize: '0.875rem', transition: 'color 200ms ease' }}
+                    onMouseEnter={(e) => (e.currentTarget.style.color = '#1a1a16')}
+                    onMouseLeave={(e) => (e.currentTarget.style.color = '#4a5240')}
                     target={c.href.startsWith('mailto') ? undefined : '_blank'}
                     rel="noopener noreferrer"
                   >
@@ -101,7 +101,7 @@ export default function Footer() {
             gap: '0.75rem',
           }}
         >
-          <p style={{ color: '#a8a29e', fontSize: '0.8125rem' }}>{FOOTER.copyright}</p>
+          <p style={{ color: '#4a5240', fontSize: '0.8125rem' }}>{FOOTER.copyright}</p>
           <span className="label-tag">{FOOTER.bottomTag}</span>
         </div>
       </div>
